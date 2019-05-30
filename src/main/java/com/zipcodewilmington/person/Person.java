@@ -7,6 +7,9 @@ public class Person {
     private String name;
     private int age;
 
+    private String maritalStatus;
+    private Character sex;
+
     public Person() {
         this.name = "";
         this.age = Integer.MAX_VALUE;
@@ -25,6 +28,11 @@ public class Person {
         this.age = age;
     }
 
+    public Person(String name, String maritalStatus) {
+        this.name = name;
+        this.maritalStatus = maritalStatus;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -41,4 +49,21 @@ public class Person {
     public Integer getAge() {
         return age;
     }
+
+    public String getMaritalStatus() {
+        return maritalStatus;
+    }
+
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+
+    public Character getSex() {
+        return sex;
+    }
+
+    public void setSex(Character sex) {
+        this.sex = sex;
+    }
+
 }

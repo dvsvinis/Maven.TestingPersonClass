@@ -95,4 +95,39 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetMaritalStatus() {
+        // Given
+        Person person = new Person();
+        String expected = "single";
+
+        // When
+        person.setName(expected);
+        String actual = person.getName();
+        person.setMaritalStatus(expected);
+        String actualMaritalStatus = person.getMaritalStatus();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithNameAndMaritalStatus() {
+        // Given
+        String expectedName = "Leon";
+        String expectedMaritalStatus = "single";
+
+        // When
+        Person person = new Person(expectedName, expectedMaritalStatus);
+
+        // Then
+
+        String actualName = person.getName();
+        String actualMaritalStatus = person.getMaritalStatus();
+
+        Assert.assertEquals(expectedMaritalStatus, actualMaritalStatus);
+        Assert.assertEquals(expectedName, actualName);
+    }
+
 }
